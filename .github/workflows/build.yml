@@ -9,6 +9,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Output Run ID
+        run: echo ${{ github.run_id }}
+
+      - name: Output Run Number
+        run: echo ${{ github.run_number }}
+
       - name: Checkout
         uses: actions/checkout@v2
 
