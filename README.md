@@ -1,4 +1,4 @@
 Minima Setup
 ===
 
-![Descritpion](minima-setup.gif "Title")
+![Description](minima-setup.gif "Title")
