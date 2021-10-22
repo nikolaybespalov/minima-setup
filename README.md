@@ -1,6 +1,6 @@
 Minima Setup
 ===
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nikolaybespalov/minima-setup/Build?label=Build)](https://github.com/nikolaybespalov/winsw-maven-plugin/actions?query=workflow%3ABuild)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nikolaybespalov/minima-setup/Build?label=Build)](https://github.com/nikolaybespalov/minima-setup/actions?query=workflow%3ABuild)
 
 Windows installer for the Minima project.
 
