@@ -47,13 +47,13 @@ Name: "{group}\MiniDapp Hub"; Filename: "http://localhost:9004"
 Filename: "{tmp}\7za.exe"; Parameters: "x ""{tmp}\{#JreOutputFile}"" -o""{tmp}\"" * -aoa"; StatusMsg: "Extracting Java..."; Flags: runhidden;
 Filename: "{tmp}\7za.exe"; Parameters: "x ""{tmp}\jre.tar"" -o""{app}\"" * -r -aoa"; StatusMsg: "Extracting Java..."; Flags: runhidden;
 ;; Run as Service
-Filename: "{app}\minima.exe"; Parameters: "install"; StatusMsg: "Installing the service..."; Flags: runhidden;
-Filename: "{app}\minima.exe"; Parameters: "start"; StatusMsg: "Starting the service..."; Flags: runhidden;
+Filename: "{app}\minima.exe"; Parameters: "install"; StatusMsg: "Installing the service..."; Flags: runhidden runascurrentuser;
+Filename: "{app}\minima.exe"; Parameters: "start"; StatusMsg: "Starting the service..."; Flags: runhidden runascurrentuser;
 Filename: "http://localhost:9004"; Flags: shellexec runasoriginaluser postinstall; Description: "Open MiniDapp Hub."
 
 [UninstallRun]
-Filename: "{app}\minima.exe"; Parameters: "stop"; Flags: runhidden;
-Filename: "{app}\minima.exe"; Parameters: "uninstall"; Flags: runhidden;
+Filename: "{app}\minima.exe"; Parameters: "stop"; Flags: runhidden runascurrentuser;
+Filename: "{app}\minima.exe"; Parameters: "uninstall"; Flags: runhidden runascurrentuser;
 
 [UninstallDelete]
 Type: files; Name: "{app}\minima.exe"
